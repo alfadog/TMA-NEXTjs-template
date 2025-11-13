@@ -1,0 +1,41 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(20, 28, 60, 0.95) 0%, rgba(22, 13, 40, 0.88) 100%);
+  color: var(--tg-theme-text-color, #ffffff);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255, 98, 211, 0.25) 0, transparent 55%),
+    radial-gradient(circle at 80% 0, rgba(73, 135, 255, 0.3) 0, transparent 60%),
+    radial-gradient(circle at 40% 80%, rgba(255, 204, 0, 0.25) 0, transparent 60%);
+  filter: blur(0px);
+  z-index: 0;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  padding: 24px 20px 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px 16px 96px;
+  }
+}

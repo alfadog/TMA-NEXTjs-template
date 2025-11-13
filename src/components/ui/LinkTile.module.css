@@ -1,0 +1,86 @@
+.tile {
+  display: block;
+  text-decoration: none;
+  border-radius: 24px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.4);
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titleRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.trailing {
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 4px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+}
+
+.purple {
+  background: linear-gradient(135deg, #8f4efc 0%, #5233e6 100%);
+}
+
+.blue {
+  background: linear-gradient(135deg, #3d8bff 0%, #2d5dff 100%);
+}
+
+.green {
+  background: linear-gradient(135deg, #4ed4a1 0%, #2aa875 100%);
+}
+
+.orange {
+  background: linear-gradient(135deg, #ff9b43 0%, #ff6a3d 100%);
+}
+
+.pink {
+  background: linear-gradient(135deg, #ff6fd8 0%, #ff3c6a 100%);
+}
