@@ -1,0 +1,78 @@
+.bar {
+  background: rgba(13, 18, 38, 0.7);
+  border-radius: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.track {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.fill {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.best {
+  position: absolute;
+  top: -24px;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.teal .fill {
+  background: linear-gradient(135deg, #27ffcf 0%, #00a693 100%);
+}
+
+.purple .fill {
+  background: linear-gradient(135deg, #b980ff 0%, #7535ff 100%);
+}
+
+.orange .fill {
+  background: linear-gradient(135deg, #ffb865 0%, #ff6b45 100%);
+}
+
+.pink .fill {
+  background: linear-gradient(135deg, #ff75d8 0%, #ff3d86 100%);
+}
+
+.yellow .fill {
+  background: linear-gradient(135deg, #ffe568 0%, #ffb300 100%);
+}
+
+.blue .fill {
+  background: linear-gradient(135deg, #70b1ff 0%, #346dff 100%);
+}

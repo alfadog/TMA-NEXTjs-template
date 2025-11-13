@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #9c4dff 0%, #ff3a8c 100%);
+  border-radius: 28px;
+  padding: 24px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 22px 46px rgba(156, 77, 255, 0.45);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: rgba(13, 18, 38, 0.75);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.prizeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.prizeRow span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cta {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff89f5 0%, #6c5cff 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
