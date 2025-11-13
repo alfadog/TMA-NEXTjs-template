@@ -5,23 +5,9 @@ import PlayerHeader from "../components/PlayerHeader";
 import StatCard from "../components/StatCard";
 import RecentResults from "../components/RecentResults";
 import BottomBar from "../components/BottomBar";
-import { useEffect } from "react";
-import { useMainButton } from "@telegram-apps/sdk-react";
 import Link from "next/link";
 
 export default function HomePage() {
-  // Telegram MainButton (нижняя нативная кнопка)
-  const mainButton = useMainButton();
-
-  useEffect(() => {
-    mainButton.setText("Play: Memory Matrix");
-    mainButton.show();
-    mainButton.onClick(() => {
-      window.location.href = "/memory";
-    });
-    return () => mainButton.hide();
-  }, [mainButton]);
-
   const recent = [
     { date: "2025-11-11", score: 42, level: 7 },
     { date: "2025-11-10", score: 36, level: 6 },
