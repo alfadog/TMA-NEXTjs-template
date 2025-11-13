@@ -1,63 +1,41 @@
-'use client';
+"use client";
 
-import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
-import { useTranslations } from 'next-intl';
+import { Button, Section } from "@telegram-apps/telegram-ui";
+import PlayerHeader from "../components/PlayerHeader";
+import StatCard from "../components/StatCard";
+import RecentResults from "../components/RecentResults";
+import BottomBar from "../components/BottomBar";
+import Link from "next/link";
 
-import { Link } from '@/components/Link/Link';
-import { LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
-import { Page } from '@/components/Page';
-
-import tonSvg from './_assets/ton.svg';
-
-export default function Home() {
-  const t = useTranslations('i18n');
+export default function HomePage() {
+  const recent = [
+    { date: "2025-11-11", score: 42, level: 7 },
+    { date: "2025-11-10", score: 36, level: 6 },
+  ];
 
   return (
-    <Page back={false}>
-      <List>
-        <Section
-          header="Features"
-          footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
-        >
-          <Link href="/ton-connect">
-            <Cell
-              before={
-                <Image
-                  src={tonSvg.src}
-                  style={{ backgroundColor: '#007AFF' }}
-                  alt="TON Logo"
-                />
-              }
-              subtitle="Connect your TON wallet"
-            >
-              TON Connect
-            </Cell>
-          </Link>
-        </Section>
-        <Section
-          header="Application Launch Data"
-          footer="These pages help developer to learn more about current launch information"
-        >
-          <Link href="/init-data">
-            <Cell subtitle="User data, chat information, technical data">
-              Init Data
-            </Cell>
-          </Link>
-          <Link href="/launch-params">
-            <Cell subtitle="Platform identifier, Mini Apps version, etc.">
-              Launch Parameters
-            </Cell>
-          </Link>
-          <Link href="/theme-params">
-            <Cell subtitle="Telegram application palette information">
-              Theme Parameters
-            </Cell>
-          </Link>
-        </Section>
-        <Section header={t('header')} footer={t('footer')}>
-          <LocaleSwitcher />
-        </Section>
-      </List>
-    </Page>
+    <div className="pb-24 px-3">
+      <PlayerHeader name="Player" username="you" />
+
+      <Section header="Stats">
+        <div className="grid grid-cols-3 gap-3">
+          <StatCard label="Level" value={7} />
+          <StatCard label="Score" value={42} />
+          <StatCard label="Streak" value={3} />
+        </div>
+      </Section>
+
+      <Section header="Quick Start">
+        <Link href="/memory">
+          <Button size="l" stretched>
+            Play Memory Matrix
+          </Button>
+        </Link>
+      </Section>
+
+      <RecentResults items={recent} />
+
+      <BottomBar />
+    </div>
   );
 }
